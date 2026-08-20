@@ -29,14 +29,16 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_URL: postgresql+asyncpg://fraud_user:fraud_pass@db:5432/fraud_db
-      REDIS_URL: redis://redis:6379
-      QDRANT_URL: http://qdrant:6333
-      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY}
+      DATABASE_URL: "postgresql+asyncpg://fraud_user:fraud_pass@db:5432/fraud_db"
+      REDIS_URL: "redis://redis:6379"
+      QDRANT_URL: "http://qdrant:6333"
+      LANGSMITH_API_KEY: "${LANGSMITH_API_KEY}"
       LANGSMITH_TRACING: "true"
-      LANGSMITH_PROJECT: fraud-intelligence-platform
-      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
-      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      LANGSMITH_PROJECT: "fraud-intelligence-platform"
+      ANTHROPIC_API_KEY: "skip_for_now"
+      OPENAI_API_KEY: "skip_for_now"
+      GOOGLE_API_KEY: "skip_for_now"
+      GROQ_API_KEY: "${GROQ_API_KEY}"
     depends_on:
       - db
       - redis

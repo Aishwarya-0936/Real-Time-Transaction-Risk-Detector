@@ -17,7 +17,7 @@ function App() {
           <div className="brand-mark">
             <Activity size={20} strokeWidth={2.5} />
           </div>
-          <span className="brand-name">FRAUD INTELLIGENCE</span>
+          <span className="brand-name">REAL-TIME TRANSACTION RISK DETECTOR</span>
           <span className="live-indicator">
             <span className="live-dot" />
             LIVE

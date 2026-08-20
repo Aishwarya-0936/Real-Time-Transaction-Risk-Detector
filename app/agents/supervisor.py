@@ -27,9 +27,9 @@ async def supervisor_node(state: FraudAnalysisState) -> FraudAnalysisState:
     risk_level = get_risk_level(total_score)
 
     summary = await generate_fraud_summary(
-        state["transaction"], total_score, risk_level, all_signals, state.get("similar_cases", [])
-    )
-
+    state["transaction"], total_score, risk_level, all_signals,
+    state.get("similar_cases", []), state.get("related_patterns", [])
+)
     state["all_signals"] = all_signals
     state["total_score"] = total_score
     state["risk_level"] = risk_level

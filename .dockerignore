@@ -1,0 +1,4 @@
+.git
+.pytest_cache
+frontend/node_modules
+__pycache__
